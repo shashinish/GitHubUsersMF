@@ -7,9 +7,20 @@
 
 import Foundation
 
-struct Constants {
+enum Constants {
+    static var baseUrl = "https://api.github.com/"
     
-    struct API{
-        struct 
+}
+
+
+enum Endpoints: String {
+    case users = "users?since=%d"
+    
+    func getPath() -> String{
+        switch self {
+        case .users:
+            return "\(Constants.baseUrl)\(self.rawValue)"
+
+        }
     }
 }
