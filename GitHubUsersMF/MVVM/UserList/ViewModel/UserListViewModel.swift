@@ -22,6 +22,10 @@ class UserListViewModel{
         service = userService
     }
     
+    deinit{
+        userFetchTask?.cancel()
+    }
+    
     var numberOfUsers: Int {
         listOfUsers?.count ?? 0
     }

@@ -24,6 +24,10 @@ class UserRepoViewModel{
         selectedUser = user
     }
     
+    deinit{
+        userFetchTask?.cancel()
+    }
+    
     @discardableResult
     func fetchUser() -> Task<Void, Never>? {
         userFetchTask?.cancel()
