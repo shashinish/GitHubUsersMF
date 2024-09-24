@@ -12,6 +12,17 @@ enum UserConstants {
     enum labelStrings {
         static let userRepoTitle = "User Repository"
         static let notAvailable = "N/A"
+        static let publicRepos = "Public Repos"
+        static let publicGists = "Public Gists"
+        static let followers = "Followers"
+        static let following = "Following"
+    }
+    
+    enum iconNames {
+        static let publicRepos = "git-svgrepo-com"
+        static let publicGists = "gists-icon"
+        static let followers = "followers-icon"
+        static let following = "git-followings"
     }
     
     enum cellIdentifires {

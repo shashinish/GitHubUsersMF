@@ -21,12 +21,14 @@ class UserListTableViewCell: UITableViewCell {
     private lazy var userNameLabel: UILabel = {
         let label = UILabel.init(frame: .zero)
         label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         return label
     }()
     
     private lazy var userTypeLabel: UILabel = {
         let label = UILabel.init(frame: .zero)
-        label.textColor = .black
+        label.textColor = .lightGray
+        label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         return label
     }()
     
@@ -38,7 +40,7 @@ class UserListTableViewCell: UITableViewCell {
         contentView.addSubview(avatarImageView)
         avatarImageView.snp.makeConstraints { make in
             make.top.left.bottom.equalToSuperview().inset(20)
-            make.width.height.equalTo(120)
+            make.width.height.equalTo(70)
         }
         
         contentView.addSubview(userNameLabel)
@@ -49,7 +51,7 @@ class UserListTableViewCell: UITableViewCell {
         
         contentView.addSubview(userTypeLabel)
         userTypeLabel.snp.makeConstraints { make in
-            make.top.equalTo(userNameLabel.snp.bottom).inset(-20)
+            make.top.equalTo(userNameLabel.snp.bottom).inset(-10)
             make.right.equalToSuperview().inset(20)
             make.left.equalTo(avatarImageView.snp.right).inset(-20)
         }
@@ -57,7 +59,7 @@ class UserListTableViewCell: UITableViewCell {
     
     func configureCell(user: UserList){
         userNameLabel.text = String(
-            format: UserListConstants.labelStrings.userName, user.login
+            format: UserListConstants.labelStrings.userName, user.id , user.login
         )
         userTypeLabel.text = String(
             format: UserListConstants.labelStrings.userType, user.type

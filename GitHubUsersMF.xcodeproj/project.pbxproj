@@ -41,6 +41,7 @@
 		D38C4B492CA1BC4D00D59C91 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C4B1E2CA021AD00D59C91 /* User.swift */; };
 		D38C4B4C2CA1BC9200D59C91 /* MockUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C4B4B2CA1BC9200D59C91 /* MockUserService.swift */; };
 		D38C4B4F2CA1C22E00D59C91 /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = D38C4B4E2CA1C22E00D59C91 /* SVProgressHUD */; };
+		D38C4B512CA2766D00D59C91 /* UserInfoStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C4B502CA2766C00D59C91 /* UserInfoStarView.swift */; };
 		D3CC871B2C9BF72000BC2FBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CC871A2C9BF72000BC2FBE /* AppDelegate.swift */; };
 		D3CC871D2C9BF72000BC2FBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CC871C2C9BF72000BC2FBE /* SceneDelegate.swift */; };
 		D3CC871F2C9BF72000BC2FBE /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CC871E2C9BF72000BC2FBE /* UserListViewController.swift */; };
@@ -95,6 +96,7 @@
 		D38C4B422CA1B61600D59C91 /* UserRepoViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepoViewModelTest.swift; sourceTree = "<group>"; };
 		D38C4B472CA1BC1600D59C91 /* UserListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelTest.swift; sourceTree = "<group>"; };
 		D38C4B4B2CA1BC9200D59C91 /* MockUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserService.swift; sourceTree = "<group>"; };
+		D38C4B502CA2766C00D59C91 /* UserInfoStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoStarView.swift; sourceTree = "<group>"; };
 		D3CC87172C9BF72000BC2FBE /* GitHubUsersMF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubUsersMF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3CC871A2C9BF72000BC2FBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3CC871C2C9BF72000BC2FBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				D38C4B282CA036F200D59C91 /* DetailItemTableViewCell.swift */,
 				D38C4B2B2CA0396D00D59C91 /* UserRepoViewController.swift */,
 				D38C4B322CA055A400D59C91 /* UserInfoView.swift */,
+				D38C4B502CA2766C00D59C91 /* UserInfoStarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				D38C4B362CA0618A00D59C91 /* Repo.swift in Sources */,
 				D38C4B112C9EE90B00D59C91 /* UserListTableViewCell.swift in Sources */,
 				D38C4B1F2CA021AD00D59C91 /* User.swift in Sources */,
+				D38C4B512CA2766D00D59C91 /* UserInfoStarView.swift in Sources */,
 				D38C4B0A2C9E9EA200D59C91 /* UserListConstants.swift in Sources */,
 				D3CC871B2C9BF72000BC2FBE /* AppDelegate.swift in Sources */,
 				D38C4B2F2CA03AA300D59C91 /* UserRepoViewModel.swift in Sources */,

@@ -11,8 +11,8 @@ enum UserListConstants{
     
     enum labelStrings {
         static let userListTitle = "List of github users"
-        static let userName = "User Name : %@"
-        static let userType = "User Type : %@"
+        static let userName = "User: %d %@"
+        static let userType = "Type: %@"
     }
     
     enum cellIdentifires {
