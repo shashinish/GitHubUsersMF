@@ -38,7 +38,6 @@ final class UserInfoStarView: UIView {
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [iconImageView, iconNameLabel, iconCountLabel])
-        //stackView.frame = CGRect(x: 0, y: 0, width: 30, height: 90)
         stackView.distribution = .equalCentering
         stackView.axis = .vertical
         stackView.spacing = 2

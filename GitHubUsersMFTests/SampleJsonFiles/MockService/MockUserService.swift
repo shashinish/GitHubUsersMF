@@ -10,7 +10,7 @@ import Foundation
 class MockUserService{
     
     init(){
-        // init
+        // initiali
     }
     
     func loadUserList() -> [UserList]? {

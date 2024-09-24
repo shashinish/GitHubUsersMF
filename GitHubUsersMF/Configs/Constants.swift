@@ -12,7 +12,6 @@ enum Constants {
     
 }
 
-
 enum Endpoints: String {
     case users = "users?since=%d"
     
@@ -20,7 +19,6 @@ enum Endpoints: String {
         switch self {
         case .users:
             return "\(Constants.baseUrl)\(self.rawValue)"
-
         }
     }
 }

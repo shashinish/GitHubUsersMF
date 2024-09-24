@@ -91,6 +91,7 @@ class UserRepoViewModel{
     }
 }
 
+/// Combine methods
 extension UserRepoViewModel{
     
     var userPublisher: AnyPublisher<User, Never> {
