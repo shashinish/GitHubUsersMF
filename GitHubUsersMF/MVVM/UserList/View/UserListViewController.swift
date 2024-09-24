@@ -114,8 +114,9 @@ extension UserListViewController: UIScrollViewDelegate {
     }
 
     func scrollingFinished() {
-        showProgress()
-        currentUserCount += 0
-        viewModel.fetchUsers(count: currentUserCount)
+        // MARK: Commented and Disabled by author. Can enable to fetch more
+        //showProgress()
+        //currentUserCount += 0
+        //viewModel.fetchUsers(count: currentUserCount)
     }
 }
