@@ -37,13 +37,11 @@ class UserRepoViewModel{
                 try Task.checkCancellation()
                 if let sUser = selectedUser {
                     let user = try await service?.getUser(userListObject: sUser)
-                    //self.userObject = user
-                    self.userObject = self.loadUserJson()
+                    self.userObject = user
                 }
                 if let userObj = self.userObject {
                     let repo = try await service?.getUserRepoData(userObject: userObj)
-                    //self.repoObjects = repo
-                    self.repoObjects = self.loadRepoJson()
+                    self.repoObjects = repo
                 }
             }catch{
                 self.errorSubject.send(error)
@@ -64,34 +62,6 @@ class UserRepoViewModel{
     
     func getRepoItem(index: Int) -> Repo? {
         return repoObjects?[index]
-    }
-    
-    func loadUserJson() -> User? {
-        if let url = Bundle.main.url(forResource: "gitHubUser", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                let jsonData = try decoder.decode(User.self, from: data)
-                return jsonData
-            } catch {
-                print("error:\(error)")
-            }
-        }
-        return nil
-    }
-    
-    func loadRepoJson() -> [Repo]? {
-        if let url = Bundle.main.url(forResource: "gitHubUserRepo", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                let jsonData = try decoder.decode([Repo].self, from: data)
-                return jsonData
-            } catch {
-                print("error:\(error)")
-            }
-        }
-        return nil
     }
 }
 

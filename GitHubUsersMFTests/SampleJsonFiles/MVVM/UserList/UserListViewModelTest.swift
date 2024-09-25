@@ -6,11 +6,12 @@
 //
 
 import XCTest
-import GitHubUsersMF
+@testable import GitHub_Users
 
 final class UserListViewModelTest: XCTestCase {
     
-    let service: MockUserService!
+    var service: MockUserService!
+    var viewModel: UserListViewModel!
     
     override func setUp() {
         service = MockUserService()
@@ -21,19 +22,29 @@ final class UserListViewModelTest: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+
     }
 
-    func testFetchUserList(){
-        
-    }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
+    func testFetchUsers() {
+        Task {
+            let users = service.loadUserList()
+            XCTAssertNotNil(users)
+            
+            guard let listOfusers = users else { return }
+            viewModel = UserListViewModel(users: listOfusers)
+            
+            XCTAssertNotNil(viewModel.listOfUsers)
+            XCTAssertEqual(viewModel.listOfUsers?.count, 30)
+            XCTAssertEqual(viewModel.numberOfUsers, 30)
+            
+            let user = viewModel.getUser(index: 0)
+            XCTAssertNotNil(user)
+            XCTAssertEqual(user?.login, "bs")
+            XCTAssertEqual(user?.type, "User")
+            XCTAssertEqual(user?.id, 68)
+            
+            viewModel = UserListViewModel(users: [])
+            XCTAssertEqual(viewModel.listOfUsers, [])
         }
     }
 }

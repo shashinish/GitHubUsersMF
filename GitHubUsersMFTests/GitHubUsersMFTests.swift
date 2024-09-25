@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import GitHubUsersMF
+@testable import GitHub_Users
 
 final class GitHubUsersMFTests: XCTestCase {
 

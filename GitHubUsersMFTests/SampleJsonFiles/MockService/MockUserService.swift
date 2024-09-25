@@ -6,6 +6,8 @@
 //
 
 import Foundation
+@testable import GitHub_Users
+
 
 class MockUserService{
     

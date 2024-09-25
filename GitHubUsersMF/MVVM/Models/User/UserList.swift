@@ -7,7 +7,8 @@
 
 import Foundation
 
-class UserList: Codable {
+class UserList: Codable, Equatable {
+    
     let login: String
     let id: Int
     let nodeID: String
@@ -60,5 +61,9 @@ class UserList: Codable {
         self.receivedEventsURL = receivedEventsURL
         self.type = type
         self.siteAdmin = siteAdmin
+    }
+    
+    static func == (lhs: UserList, rhs: UserList) -> Bool {
+        lhs.id == rhs.id
     }
 }

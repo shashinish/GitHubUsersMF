@@ -10,7 +10,7 @@ import Combine
 
 class UserListViewModel{
     
-    @Published private(set) var listOfUsers:[UserList]?
+    @Published private(set) var listOfUsers: [UserList]?
     @Published private(set) var error: String?
     
     private var userFetchTask: Task<Void, Never>? = nil
@@ -18,8 +18,9 @@ class UserListViewModel{
     
     private var service: UserService?
     
-    init(userService: UserService = UserService()) {
+    init(userService: UserService = UserService(), users: [UserList] = []) {
         service = userService
+        listOfUsers = users
     }
     
     deinit{
@@ -42,8 +43,7 @@ class UserListViewModel{
             do{
                 try Task.checkCancellation()
                 let users = try await service?.getUserList(nextCount: count)
-                //self.listOfUsers = users
-                self.listOfUsers = self.loadUserList()
+                self.listOfUsers = users
             }catch{
                 self.errorSubject.send(error)
             }
@@ -51,20 +51,6 @@ class UserListViewModel{
         
         userFetchTask = task
         return task
-    }
-    
-    func loadUserList() -> [UserList]? {
-        if let url = Bundle.main.url(forResource: "gitHubUsers", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                let jsonData = try decoder.decode([UserList].self, from: data)
-                return jsonData
-            } catch {
-                print("error:\(error)")
-            }
-        }
-        return nil
     }
 }
 

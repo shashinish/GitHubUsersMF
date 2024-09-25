@@ -36,7 +36,6 @@
 		D38C4B3D2CA06FBA00D59C91 /* RepoDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C4B3C2CA06FBA00D59C91 /* RepoDetailTableViewCell.swift */; };
 		D38C4B3F2CA0758400D59C91 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C4B3E2CA0758400D59C91 /* WebViewController.swift */; };
 		D38C4B432CA1B61600D59C91 /* UserRepoViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C4B422CA1B61600D59C91 /* UserRepoViewModelTest.swift */; };
-		D38C4B452CA1B65400D59C91 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C4AFD2C9E603700D59C91 /* UserList.swift */; };
 		D38C4B482CA1BC1600D59C91 /* UserListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C4B472CA1BC1600D59C91 /* UserListViewModelTest.swift */; };
 		D38C4B492CA1BC4D00D59C91 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C4B1E2CA021AD00D59C91 /* User.swift */; };
 		D38C4B4C2CA1BC9200D59C91 /* MockUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C4B4B2CA1BC9200D59C91 /* MockUserService.swift */; };
@@ -594,7 +593,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D38C4B452CA1B65400D59C91 /* UserList.swift in Sources */,
 				D38C4B372CA0618C00D59C91 /* Repo.swift in Sources */,
 				D38C4B492CA1BC4D00D59C91 /* User.swift in Sources */,
 				D3CC87362C9BF72200BC2FBE /* GitHubUsersMFTests.swift in Sources */,
@@ -838,7 +836,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubUsersMF.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GitHubUsersMF";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHub Users.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GitHub Users";
 			};
 			name = Debug;
 		};
@@ -857,7 +855,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubUsersMF.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GitHubUsersMF";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHub Users.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GitHub Users";
 			};
 			name = Release;
 		};
